@@ -1,4 +1,5 @@
 import "../styles/main.css";
+import {  Link } from "react-router-dom";
 
 const Billing = () => {
   return (
@@ -6,9 +7,15 @@ const Billing = () => {
       <div className="form">
         <h3>Complete your Purchase</h3>
         <nav>
-          <h5>Personal Info</h5>
-          <h5 className="page">Billing Info</h5>
-          <h5>Confirm Payment</h5>
+          <Link to="/" style={{ textDecoration: "none" }}>
+            <h5>Personal Info</h5>
+          </Link>
+          <Link to="/billing" style={{ textDecoration: "none" }}>
+            <h5 className="page">Billing Info</h5>
+          </Link>
+          <Link to="/confirm" style={{ textDecoration: "none" }}>
+            <h5>Confirm Payment</h5>
+          </Link>
         </nav>
         <div className="focus-1"></div>
         <section>
@@ -28,7 +35,7 @@ const Billing = () => {
           <div>
             <p className="required">Card Details</p>
             <input
-            className='card-number'
+              className="card-number"
               type="tel"
               inputMode="numeric"
               pattern="[0-9\s]{13,19}"
@@ -40,7 +47,7 @@ const Billing = () => {
           <div>
             <p className="required">Expiry Date</p>
             <input
-            className='expiry'
+              className="expiry"
               type="tel"
               inputMode="numeric"
               pattern="[0-9\s]{13,19}"
@@ -51,13 +58,16 @@ const Billing = () => {
           </div>
           <div>
             <p className="required">CVV</p>
-            <input className='cvv' type="number" placeholder='923' />
+            <input className="cvv" type="number" placeholder="923" />
           </div>
         </section>
         <footer>
-          <button className="next">Next</button>
-
-          <button className="cancel">Cancel Payment</button>
+          <Link to="/confirm">
+            <button className="next">Next</button>
+          </Link>
+          <Link to="/">
+            <button className="cancel">Cancel Payment</button>
+          </Link>
         </footer>
       </div>
     </div>

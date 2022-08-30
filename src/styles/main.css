@@ -1,18 +1,33 @@
 .container {
   /* margin: 10vh auto; */
   display: grid;
-  /* background: linear-gradient(170deg,rgba(242, 153, 74, 0.2) 0 50%, #fff 50% 100%); */
-  /* background: linear-gradient(100deg, rgba(63, 63, 63, 0.8) 0%, rgba(255, 255, 255, 0) 25%); */
+  /* height: 100vh; */
+  min-width: 100vw;
+}
+
+.end-container {
+    display: grid;
+  height: 100vh;
+  min-width: 100vw;
 }
 
 .form {
   margin: 20px;
   min-width: 60vw;
+
   align-self: center;
   justify-self: center;
 }
 .form h3 {
   margin-top: 10vh;
+  color: #4e598c;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 50px;
+}
+
+.form h2{
+     margin-top: 10vh;
   color: #4e598c;
   font-weight: 700;
   font-size: 36px;
@@ -29,8 +44,8 @@ nav {
 nav h5 {
   color: #bdbdbd;
   font-weight: 700;
-  font-size: 24px;
-  line-height: 34px;
+  font-size: 2vw;
+  line-height: 3vh;
   cursor: pointer;
 }
 nav h5.page {
@@ -202,9 +217,64 @@ footer .cancel {
 
 .modal{
 width: 100%;
-/* border: 1px solid #fff; */
-/* border-radius: 20px; */
 margin-top: 20px;
+}
+
+.end-modal{
+    max-width: 70vw;
+    margin-top: 20px;
+background: #FFFFFF;
+box-shadow: 0px 6px 10px rgba(33, 30, 67, 0.08);
+border-radius: 10px;
+padding: 7vh;
+/* text-align: center; */
+/* display: flex; */
+
+
+}
+
+
+.details{
+color: #4F4F4F;
+font-weight: 400;
+font-size: 20px;
+line-height: 30px;
+}
+
+.home{
+/* text-decoration-line: underline; */
+text-decoration: none;
+font-weight: 400;
+font-size: 20px;
+line-height: 30px;
+background: linear-gradient(180deg, #F2C94C 0%, #F2994A 100%);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+background-clip: text;
+cursor:pointer;
+}
+
+.home:hover{
+    text-decoration:underline;
+
+}
+
+.icon-container{
+    display: grid;
+}
+
+.icon {
+    /* justify-self: center; */
+    /* margin: 0 auto; */
+    place-self: center;
+}
+
+.vector{
+    transform: translate(-60px, -50px);
+    z-index: 2;
+}
+.ellipse{
+    transform: translate(20px, 0);
 }
 
 .body{
@@ -274,7 +344,8 @@ display: flex;
 hr{
     width: 90%;
 }
-@media only screen and (max-width: 800px) {
+
+@media only screen and (max-width: 1100px) {
 
 
     p{
@@ -287,7 +358,7 @@ hr{
         line-height: 30px;
     }
     nav h5 {
-        font-size: 3.5vw;
+        font-size: 3vw;
     }
 
     .focus{
@@ -355,6 +426,15 @@ hr{
     flex-direction: column;
     justify-content: space-between;
     min-height: 400px;
+}
+
+.focus-2{
+  
+  transform: translate(175%, -6px);
+  width: 22vw;
+        height: 8px;
+        border-radius: 6px;
+
 }
 
 }

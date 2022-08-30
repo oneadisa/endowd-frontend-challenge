@@ -1,4 +1,5 @@
-import React from 'react'
+import "../styles/main.css";
+import {  Link } from "react-router-dom";
 
 const Confirm = () => {
   return (
@@ -6,9 +7,15 @@ const Confirm = () => {
       <div className="form">
         <h3>Complete your Purchase</h3>
         <nav>
-          <h5>Personal Info</h5>
-          <h5>Billing Info</h5>
-          <h5>Confirm Payment</h5>
+          <Link to="/" style={{ textDecoration: "none" }}>
+            <h5>Personal Info</h5>
+          </Link>
+          <Link to="/billing" style={{ textDecoration: "none" }}>
+            <h5>Billing Info</h5>
+          </Link>
+          <Link to="/confirm" style={{ textDecoration: "none" }}>
+            <h5 className="page">Confirm Payment</h5>
+          </Link>
         </nav>
         <div className="focus-2"></div>
         <div className="modal">
@@ -35,12 +42,16 @@ const Confirm = () => {
           </div>
         </div>
         <footer>
-          <button className="next">Pay</button>
-          <button className="cancel">Cancel Payment</button>
+          <Link to="/completed">
+            <button className="next">Pay</button>
+          </Link>
+          <Link to="/">
+            <button className="cancel">Cancel Payment</button>
+          </Link>
         </footer>
       </div>
     </div>
   );
-}
+};
 
-export default Confirm
+export default Confirm;

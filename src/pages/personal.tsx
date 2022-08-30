@@ -1,4 +1,5 @@
 import "../styles/main.css";
+import {  Link} from "react-router-dom";
 
 const Personal = () => {
   return (
@@ -6,10 +7,15 @@ const Personal = () => {
       <div className="form">
         <h3>Complete your Purchase</h3>
         <nav>
-          <h5 className="page">Personal Info</h5>
-
-          <h5>Billing Info</h5>
-          <h5>Confirm Payment</h5>
+          <Link to="/" style={{ textDecoration: "none" }}>
+            <h5 className="page">Personal Info</h5>
+          </Link>
+          <Link to="/billing" style={{ textDecoration: "none" }}>
+            <h5>Billing Info</h5>
+          </Link>
+          <Link to="/confirm" style={{ textDecoration: "none" }}>
+            <h5>Confirm Payment</h5>
+          </Link>
         </nav>
         <div className="focus"></div>
         <section>
@@ -38,7 +44,7 @@ const Personal = () => {
           </div>
           <div>
             <p>State</p>
-            <select >
+            <select>
               <option value="Lagos">Lagos</option>
               <option value="Abuja">Abuja</option>
               <option value="Ogun">Ogun</option>
@@ -50,9 +56,12 @@ const Personal = () => {
           </div>
         </section>
         <footer>
-          <button className= 'next'>Next</button>
-
-          <button className='cancel'>Cancel Payment</button>
+          <Link to="/billing">
+            <button className="next">Next</button>
+          </Link>
+          <Link to='/'>
+            <button className="cancel">Cancel Payment</button>
+          </Link>
         </footer>
       </div>
     </div>
