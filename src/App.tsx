@@ -1,23 +1,21 @@
 // import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Completed from "../components/completed";
-import Billing from "../components/billing";
-import Confirm from "../components/confirm";
-import Personal from "../components/personal";
-import NotFound from "../components/notFound";
+import Completed from "./pages/completed";
+import Billing from "./pages/billing";
+import Confirm from "./pages/confirm";
+import Personal from "./pages/personal";
+import NotFound from "./pages/notFound";
 
 function App() {
   return (
     <div className="App">
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<App />}>
-            <Route index element={<Personal />} />
-            <Route path="/" element={<Billing />} />
-            <Route path="/" element={<Confirm />} />
-            <Route path="/" element={<Completed />} />
-            <Route path="/" element={<NotFound />} />
-          </Route>
+          <Route path="/" element={<Personal />} />
+          <Route path="/billing" element={<Billing />} />
+          <Route path="/confirm" element={<Confirm />} />
+          <Route path="/completed" element={<Completed />} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
     </div>
